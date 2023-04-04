@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>News Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 9rem;
+            background-image: url("https://th.bing.com/th/id/R.e11e2fa14d1c4f92175f3c45d569c9b3?rik=qbKHhHPX%2b4WG1Q&riu=http%3a%2f%2fwww.blslibrary.com%2fwp-content%2fuploads%2f2021%2f04%2fcollection-newspapers.jpg&ehk=jUhgpNbbkEB17VQnlRoDWYfS%2bV962eb9WOktrOhO0SA%3d&risl=&pid=ImgRaw&r=0");
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem;
+            background-color: rgba(255, 255, 255, 0.7);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .real {
+            color: green;
+        }
+
+        .fake {
+            color: red;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        p {
+            font-size: 30px;
+            text-align: center;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the News Prediction Page</h1>
+        <p>News Result is:</p>
+        {% if parameter == 1 %}
+             <p class="fake">{{ message }}</p>
+        {% elif parameter == 0 %}
+            <p class="real">{{ message }}</p>
+        {% else %}
+            <p class="fake">ERROR</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

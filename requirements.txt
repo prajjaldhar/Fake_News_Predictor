@@ -1,0 +1,11 @@
+pandas
+numpy
+seaborn
+scikit-learn
+TfIdfTransformer
+nltk
+regex
+pickle5
+Flask
+streamlit
+#-e .
